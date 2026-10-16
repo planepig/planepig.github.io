@@ -1,0 +1,18 @@
+type = "card"
+title = "Teaching"
+description = "Courses I have assisted with at City University of Hong Kong."
+
+[[items]]
+title = "Natural Language Processing"
+subtitle = "Teaching Assistant"
+tags = ["CityU Dongguan", "CS6493"]
+
+[[items]]
+title = "Software Design"
+subtitle = "Teaching Assistant"
+tags = ["City University of Hong Kong", "CS3342"]
+
+[[items]]
+title = "Software Engineering Practice"
+subtitle = "Teaching Assistant"
+tags = ["City University of Hong Kong", "CS3343"]

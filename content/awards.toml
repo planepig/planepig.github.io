@@ -1,0 +1,21 @@
+type = "card"
+title = "Awards"
+
+[[items]]
+title = "Outstanding Academic Performance Award for Research Degree Students"
+subtitle = "City University of Hong Kong"
+date = "2026–2027"
+
+[[items]]
+title = "Mitacs Globalink Research Internship Award"
+date = "2024"
+
+[[items]]
+title = "CUMCM National Second Prize"
+date = "2023"
+tags = ["Top 2.2%"]
+
+[[items]]
+title = "Outstanding Student Scholarship"
+subtitle = "Northeastern University"
+date = "2021–2024"

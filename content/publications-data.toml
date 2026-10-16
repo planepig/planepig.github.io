@@ -1,0 +1,71 @@
+# Author lists and statuses: CV_JunyiZhou.pdf, September 2026.
+# Unpublished work is listed as preprints without submission destinations.
+
+[[publications]]
+id = "workborne"
+title = "WorkBorne: Discovering Agentic Tasks from Real-World Artifact Transitions"
+authors = ["Junyi Zhou", "Yufei Wang", "Qiyuan Zhang", "Chuhan Wu", "Zhengxi Li", "Wentao Zhao", "Jie Zhou", "Le Tian", "Zhou Xiao", "Chen Ma"]
+conference = "Preprint"
+year = 2026
+status = "draft"
+type = "preprint"
+preview = "workborne.webp"
+arxiv = "https://arxiv.org/abs/2610.14915"
+
+[[publications]]
+id = "skillforgebench"
+title = "SkillForgeBench: Evaluating Agent Reliability Grounded in Agent Skill Specifications"
+authors = ["Zhengxi Li", "Junyi Zhou", "Qiyuan Zhang", "Chuhan Wu", "Fuyuan Lyu", "Le Tian", "Zhou Xiao", "Chen Ma", "Yufei Wang"]
+co_first_authors = ["Zhengxi Li", "Junyi Zhou"]
+conference = "Preprint"
+year = 2026
+status = "draft"
+type = "preprint"
+preview = "skillforgebench.webp"
+arxiv = "https://arxiv.org/abs/2610.14918"
+
+[[publications]]
+id = "rubricbench"
+title = "RubricBench: Aligning Model-Generated Rubrics with Human Standards"
+authors = ["Junyi Zhou", "Qiyuan Zhang", "Yufei Wang", "Fuyuan Lyu", "Yidong Ming", "Can Xu", "Qingfeng Sun", "Kai Zheng", "Peng Kang", "Xue Liu", "Chen Ma"]
+co_first_authors = ["Junyi Zhou", "Qiyuan Zhang"]
+conference = "ACL"
+year = 2026
+status = "published"
+github = "https://github.com/planepig/rubricbench"
+huggingface = "https://huggingface.co/datasets/DonJoey/rubricbench"
+type = "conference"
+preview = "rubricbench.webp"
+pdf = "/papers/rubricbench.pdf"
+
+[[publications]]
+id = "caps"
+title = "Reading is Not Reasoning: Bridging the Agentic Policy Gap in Vision–Text Compression"
+authors = ["Cheng Fan", "Junyi Zhou", "Tingzhang Luo", "RongJian Xu", "Qiyanhui Lu", "Mingjian Zhu", "Hanting Chen", "Jianyuan Guo"]
+conference = "Preprint"
+year = 2026
+status = "draft"
+type = "preprint"
+preview = "caps.webp"
+arxiv = "https://arxiv.org/abs/2608.08960"
+
+[[publications]]
+id = "role-opd"
+title = "Where to Apply Privilege: On-Policy Self-Distillation with Textual Privilege for Multimodal LLMs"
+authors = ["Guoshuai Zou", "Zhi Ouyang", "Haichao Jiang", "Minghong Zhong", "Junyi Zhou", "Ruixuan Wang"]
+conference = "Preprint"
+year = 2026
+status = "draft"
+type = "preprint"
+pdf_unavailable = true
+
+[[publications]]
+id = "recjudge"
+title = "LLM-as-a-Judge for Reliable and Explainable Offline Evaluation in Top-K Recommendation"
+authors = ["Yue Que", "Junyi Zhou", "Xiaokun Zhang", "Haiming Jin", "Qiao Xiang", "Chen Ma"]
+conference = "KDD · Oral"
+year = 2026
+status = "accepted"
+type = "conference"
+preview = "recjudge.webp"
+pdf = "/papers/recjudge.pdf"

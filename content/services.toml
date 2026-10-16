@@ -1,0 +1,10 @@
+type = "card"
+title = "Service"
+
+[[items]]
+title = "ACL Rolling Review"
+subtitle = "Reviewer"
+
+[[items]]
+title = "Neurocomputing"
+subtitle = "Reviewer"

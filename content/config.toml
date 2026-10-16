@@ -1,0 +1,47 @@
+[site]
+title = "Junyi (Joey) Zhou"
+description = "Junyi Zhou is a PhD student at City University of Hong Kong researching agentic task synthesis, post-training, and evaluation."
+url = "https://planepig.github.io"
+favicon = "/favicon-plane.svg"
+
+[author]
+name = "Junyi Zhou"
+title = "PhD Student"
+institution = "City University of Hong Kong"
+avatar = "/portrait-snow-wide.jpg"
+
+[social]
+email = "junyizhou8-c@my.cityu.edu.hk"
+location = "Hong Kong SAR, China"
+location_url = "https://www.google.com/maps/search/?api=1&query=City+University+of+Hong+Kong"
+github = "https://github.com/planepig"
+linkedin = "https://www.linkedin.com/in/junyi-zhou-a2599a29b"
+google_scholar = "https://scholar.google.com/citations?user=JfHn8rIAAAAJ&hl=en"
+
+[features]
+enable_likes = false
+enable_one_page_mode = true
+show_google_scholar_placeholder = false
+
+[[navigation]]
+title = "About"
+type = "page"
+target = "about"
+href = "/"
+
+[[navigation]]
+title = "Publications"
+type = "page"
+target = "publications"
+href = "/publications"
+
+[[navigation]]
+title = "Teaching"
+type = "page"
+target = "teaching"
+href = "/teaching"
+
+[[navigation]]
+title = "CV"
+type = "link"
+href = "/CV_JunyiZhou.pdf?v=b2e53899"

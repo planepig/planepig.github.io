@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+Host: https://planepig.github.io
+Sitemap: https://planepig.github.io/sitemap.xml
