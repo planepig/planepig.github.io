@@ -1,5 +1,6 @@
 // GoatCounter: https://www.goatcounter.com
 // This file is released under the ISC license: https://opensource.org/licenses/ISC
+// Local privacy adjustment: omit screen size and raw URL queries.
 ;(function() {
 	'use strict';
 
@@ -25,9 +26,9 @@
 			r: (vars.referrer === undefined ? goatcounter.referrer : vars.referrer),
 			t: (vars.title    === undefined ? goatcounter.title    : vars.title),
 			e: !!(vars.event || goatcounter.event),
-			s: window.screen.width,
+			s: 0,
 			b: is_bot(),
-			q: location.search,
+			q: '',
 		}
 
 		var rcb, pcb, tcb  // Save callbacks to apply later.

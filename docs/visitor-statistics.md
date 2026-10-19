@@ -34,3 +34,4 @@ The official tracker is served locally as `/vendor/goatcounter.js` to avoid a
 separate CDN dependency. Source: https://github.com/arp242/goatcounter/blob/main/public/count.js
 (retrieved 2026-10-19, ISC license). Self-hosting is supported by GoatCounter:
 https://www.goatcounter.com/help/countjs-host . Keep the upstream license header.
+The local copy omits screen size and raw URL query strings from tracking payloads.
