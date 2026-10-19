@@ -13,7 +13,11 @@ export interface VisitorLocation {
 
 export default function VisitorGlobe({ locations }: { locations: VisitorLocation[] }) {
   const canvas = useRef<HTMLCanvasElement>(null);
-  const rotation = useRef({ phi: -0.2, theta: 0.25 });
+  const firstLocation = locations.find(location => location.coordinates)?.coordinates;
+  const initialRotation = firstLocation
+    ? { phi: Math.PI * 1.5 - firstLocation[1] * Math.PI / 180, theta: firstLocation[0] * Math.PI / 180 }
+    : { phi: -0.2, theta: 0.25 };
+  const rotation = useRef({ ...initialRotation });
   const dragging = useRef<{ x: number; y: number } | null>(null);
   const playing = useRef(true);
   const [paused, setPaused] = useState(false);
@@ -84,7 +88,7 @@ export default function VisitorGlobe({ locations }: { locations: VisitorLocation
     setPaused(true);
     if (location.coordinates) {
       const [latitude, longitude] = location.coordinates;
-      rotation.current = { phi: Math.PI / 2 - longitude * Math.PI / 180, theta: latitude * Math.PI / 180 };
+      rotation.current = { phi: Math.PI * 1.5 - longitude * Math.PI / 180, theta: latitude * Math.PI / 180 };
     }
   };
 
@@ -128,7 +132,7 @@ export default function VisitorGlobe({ locations }: { locations: VisitorLocation
         <button className="flex items-center gap-1.5 hover:text-accent" onClick={() => setPaused(!paused)} aria-label={paused ? 'Resume globe rotation' : 'Pause globe rotation'}>
           {paused ? <Play size={12} /> : <Pause size={12} />}{paused ? 'Rotate' : 'Pause'}
         </button>
-        <button className="hover:text-accent" aria-label="Reset globe orientation" onClick={() => { rotation.current = { phi: -0.2, theta: 0.25 }; setSelected(null); }}><RotateCcw size={13} /></button>
+        <button className="hover:text-accent" aria-label="Reset globe orientation" onClick={() => { rotation.current = { ...initialRotation }; setSelected(null); }}><RotateCcw size={13} /></button>
       </div>
     </div>
     <div className="border-t border-neutral-200/60 p-6 sm:p-8 lg:border-l lg:border-t-0">
