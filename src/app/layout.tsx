@@ -181,7 +181,7 @@ export default function RootLayout({
           <main className="min-h-screen pt-16 lg:pt-20">
             {children}
           </main>
-          <Footer lastUpdated={buildDate} />
+          <Footer lastUpdated={buildDate} siteUrl={siteUrl} />
         </ThemeProvider>
       </body>
     </html>
