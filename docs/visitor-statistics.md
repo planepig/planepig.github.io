@@ -7,7 +7,7 @@ Local previews are excluded. No private API credentials are sent to the browser.
 - Account: `planepig.goatcounter.com`
 - Tracking started: 2026-10-19
 - Account data retention: 0 (never delete)
-- Public data: country/region names, visit totals and illustrative country centres
+- Public data: country and province/state names, aggregate visit totals, and representative centres
 - No individual pageviews, referrers, device details or full IP addresses are published
 
 ## Refresh
@@ -35,3 +35,16 @@ separate CDN dependency. Source: https://github.com/arp242/goatcounter/blob/main
 (retrieved 2026-10-19, ISC license). Self-hosting is supported by GoatCounter:
 https://www.goatcounter.com/help/countjs-host . Keep the upstream license header.
 The local copy omits screen size and raw URL query strings from tracking payloads.
+
+## Province/state detail
+
+The sync requests every page of `/stats/locations/{country}` as well as country
+totals. Nested counts are not added a second time to the global total. Missing
+province/state information remains `Unspecified region`. Country totals are
+reconciled if new visits arrive while the regional requests are running.
+
+China is plotted by province when a matching province is available; unidentified
+regions use the country marker. Other countries retain country-level map markers
+with province/state counts in the list. `src/data/china-provinces.json` contains
+representative administrative centroids from DataV GeoAtlas, with the source URL
+in the file. They are not visitor coordinates or evidence of a particular city.

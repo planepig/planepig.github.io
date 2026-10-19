@@ -1,6 +1,82 @@
 {
   "since": "2026-10-19",
-  "updatedAt": "2026-10-19T11:35:36.515Z",
-  "total": 0,
-  "locations": []
+  "updatedAt": "2026-10-19T15:28:53.985Z",
+  "total": 11,
+  "locations": [
+    {
+      "code": "CN",
+      "name": "China",
+      "count": 4,
+      "coordinates": [
+        35,
+        105
+      ],
+      "regions": [
+        {
+          "code": "CN-44",
+          "name": "Guangdong",
+          "localName": "广东省",
+          "count": 4,
+          "coordinates": [
+            23.334643,
+            113.429919
+          ]
+        }
+      ]
+    },
+    {
+      "code": "US",
+      "name": "United States",
+      "count": 4,
+      "coordinates": [
+        38,
+        -97
+      ],
+      "regions": [
+        {
+          "code": "US-region-0",
+          "name": "California",
+          "localName": null,
+          "count": 4,
+          "coordinates": null
+        }
+      ]
+    },
+    {
+      "code": "SG",
+      "name": "Singapore",
+      "count": 2,
+      "coordinates": [
+        1.36666666,
+        103.8
+      ],
+      "regions": [
+        {
+          "code": "SG-region-0",
+          "name": "Unspecified region",
+          "localName": null,
+          "count": 2,
+          "coordinates": null
+        }
+      ]
+    },
+    {
+      "code": "AE",
+      "name": "United Arab Emirates",
+      "count": 1,
+      "coordinates": [
+        24,
+        54
+      ],
+      "regions": [
+        {
+          "code": "AE-region-0",
+          "name": "Dubai",
+          "localName": null,
+          "count": 1,
+          "coordinates": null
+        }
+      ]
+    }
+  ]
 }

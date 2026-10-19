@@ -1,7 +1,7 @@
 'use client';
 
 import createGlobe from 'cobe';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { Pause, Play, RotateCcw } from 'lucide-react';
 
 export interface VisitorLocation {
@@ -9,11 +9,18 @@ export interface VisitorLocation {
   name: string;
   count: number;
   coordinates: number[] | null;
+  localName?: string | null;
+  regions?: VisitorLocation[];
 }
 
 export default function VisitorGlobe({ locations }: { locations: VisitorLocation[] }) {
   const canvas = useRef<HTMLCanvasElement>(null);
-  const firstLocation = locations.find(location => location.coordinates)?.coordinates;
+  const zoom = useRef(1);
+  const points = useMemo(() => locations.flatMap(country => {
+    if (country.code !== 'CN' || !country.regions?.length) return [country];
+    return country.regions.map(region => ({ ...region, coordinates: region.coordinates ?? country.coordinates }));
+  }), [locations]);
+  const firstLocation = points.find(location => location.coordinates)?.coordinates;
   const initialRotation = firstLocation
     ? { phi: Math.PI * 1.5 - firstLocation[1] * Math.PI / 180, theta: firstLocation[0] * Math.PI / 180 }
     : { phi: -0.2, theta: 0.25 };
@@ -51,7 +58,7 @@ export default function VisitorGlobe({ locations }: { locations: VisitorLocation
     resize.observe(element);
     const visibility = new IntersectionObserver(entries => { visible = entries[0].isIntersecting; });
     visibility.observe(element);
-    const largest = Math.max(1, ...locations.map(location => location.count));
+    const largest = Math.max(1, ...points.map(location => location.count));
     let globe: ReturnType<typeof createGlobe> | undefined;
     try {
       globe = createGlobe(element, {
@@ -62,9 +69,9 @@ export default function VisitorGlobe({ locations }: { locations: VisitorLocation
         baseColor: dark ? [0.22, 0.27, 0.34] : [0.8, 0.83, 0.85],
         markerColor: [0.83, 0.58, 0.28],
         glowColor: dark ? [0.055, 0.075, 0.11] : [0.98, 0.98, 0.97],
-        markers: locations.filter(location => location.coordinates).map(location => ({
+        markers: points.filter(location => location.coordinates).map(location => ({
           location: location.coordinates as [number, number],
-          size: 0.035 + 0.075 * Math.sqrt(location.count / largest),
+          size: 0.02 + 0.05 * Math.sqrt(location.count / largest),
         })),
         onRender(state) {
           const now = performance.now();
@@ -74,6 +81,7 @@ export default function VisitorGlobe({ locations }: { locations: VisitorLocation
           previous = now;
           state.phi = rotation.current.phi;
           state.theta = rotation.current.theta;
+          state.scale = zoom.current;
           state.width = size * ratio;
           state.height = size * ratio;
         },
@@ -81,11 +89,12 @@ export default function VisitorGlobe({ locations }: { locations: VisitorLocation
       setUnavailable(false);
     } catch { setUnavailable(true); }
     return () => { resize.disconnect(); visibility.disconnect(); globe?.destroy(); };
-  }, [locations, dark]);
+  }, [points, dark]);
 
   const focusLocation = (location: VisitorLocation) => {
     setSelected(location.code);
     setPaused(true);
+    zoom.current = location.code.startsWith('CN-') && location.coordinates ? 1.45 : 1;
     if (location.coordinates) {
       const [latitude, longitude] = location.coordinates;
       rotation.current = { phi: Math.PI * 1.5 - longitude * Math.PI / 180, theta: latitude * Math.PI / 180 };
@@ -132,7 +141,9 @@ export default function VisitorGlobe({ locations }: { locations: VisitorLocation
         <button className="flex items-center gap-1.5 hover:text-accent" onClick={() => setPaused(!paused)} aria-label={paused ? 'Resume globe rotation' : 'Pause globe rotation'}>
           {paused ? <Play size={12} /> : <Pause size={12} />}{paused ? 'Rotate' : 'Pause'}
         </button>
-        <button className="hover:text-accent" aria-label="Reset globe orientation" onClick={() => { rotation.current = { ...initialRotation }; setSelected(null); }}><RotateCcw size={13} /></button>
+        <button className="px-1 hover:text-accent" aria-label="Zoom out" onClick={() => { zoom.current = Math.max(0.8, zoom.current - 0.2); }}>−</button>
+        <button className="px-1 hover:text-accent" aria-label="Zoom in" onClick={() => { zoom.current = Math.min(2.4, zoom.current + 0.2); }}>+</button>
+        <button className="hover:text-accent" aria-label="Reset globe orientation" onClick={() => { rotation.current = { ...initialRotation }; zoom.current = 1; setSelected(null); }}><RotateCcw size={13} /></button>
       </div>
     </div>
     <div className="border-t border-neutral-200/60 p-6 sm:p-8 lg:border-l lg:border-t-0">
@@ -147,11 +158,22 @@ export default function VisitorGlobe({ locations }: { locations: VisitorLocation
             <span className="absolute bottom-0 left-3 h-px bg-accent/40" style={{ width: `${(location.count / locations[0].count) * 85}%` }} />
             <span>{location.name}</span><span className="tabular-nums text-neutral-500">{location.count.toLocaleString('en-US')}</span>
           </button>
+          {!!location.regions?.length && <ul className="ml-3 border-l border-neutral-200 pl-3 py-1">
+            {location.regions.map(region => <li key={region.code}>
+              {region.coordinates ? <button onClick={() => focusLocation(region)} aria-pressed={selected === region.code}
+                className={`flex w-full items-center justify-between gap-3 rounded-md px-2 py-2 text-left text-xs hover:bg-neutral-100 ${selected === region.code ? 'text-accent bg-neutral-100' : 'text-neutral-600'}`}>
+                <span>{region.name}{region.localName && <span className="ml-1.5 text-neutral-500">{region.localName}</span>}</span>
+                <span className="tabular-nums">{region.count.toLocaleString('en-US')}</span>
+              </button> : <div className="flex items-center justify-between gap-3 px-2 py-2 text-xs text-neutral-500">
+                <span>{region.name}</span><span className="tabular-nums">{region.count.toLocaleString('en-US')}</span>
+              </div>}
+            </li>)}
+          </ul>}
         </li>)}
       </ol> : <div className="py-12 text-sm leading-7 text-neutral-500">
         A new journey starts here.<br />Visitor locations will appear after the first statistics update.
       </div>}
-      <p className="mt-6 text-xs leading-5 text-neutral-500">Each dot represents a country or region. Larger dots indicate more visits; select a location to find it on the globe.</p>
+      <p className="mt-6 text-xs leading-5 text-neutral-500">China is shown by province where known; other locations use country or region markers. Use + / − to zoom. Province and state counts appear below each country.</p>
     </div>
   </section>;
 }

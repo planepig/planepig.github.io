@@ -1,0 +1,360 @@
+{
+  "source": "https://geo.datav.aliyun.com/areas_v3/bound/100000_full.json",
+  "description": "Representative province centroids; not individual visitor coordinates.",
+  "provinces": [
+    {
+      "code": "CN-11",
+      "name": "Beijing",
+      "localName": "北京市",
+      "aliases": [],
+      "coordinates": [
+        40.18994,
+        116.41995
+      ]
+    },
+    {
+      "code": "CN-12",
+      "name": "Tianjin",
+      "localName": "天津市",
+      "aliases": [],
+      "coordinates": [
+        39.288036,
+        117.347043
+      ]
+    },
+    {
+      "code": "CN-13",
+      "name": "Hebei",
+      "localName": "河北省",
+      "aliases": [],
+      "coordinates": [
+        38.045474,
+        114.502461
+      ]
+    },
+    {
+      "code": "CN-14",
+      "name": "Shanxi",
+      "localName": "山西省",
+      "aliases": [],
+      "coordinates": [
+        37.618179,
+        112.304436
+      ]
+    },
+    {
+      "code": "CN-15",
+      "name": "Inner Mongolia",
+      "localName": "内蒙古自治区",
+      "aliases": [
+        "Nei Mongol",
+        "Nei Mongol Autonomous Region"
+      ],
+      "coordinates": [
+        44.331087,
+        114.077429
+      ]
+    },
+    {
+      "code": "CN-21",
+      "name": "Liaoning",
+      "localName": "辽宁省",
+      "aliases": [],
+      "coordinates": [
+        41.299712,
+        122.604994
+      ]
+    },
+    {
+      "code": "CN-22",
+      "name": "Jilin",
+      "localName": "吉林省",
+      "aliases": [],
+      "coordinates": [
+        43.703954,
+        126.171208
+      ]
+    },
+    {
+      "code": "CN-23",
+      "name": "Heilongjiang",
+      "localName": "黑龙江省",
+      "aliases": [],
+      "coordinates": [
+        48.040465,
+        127.693027
+      ]
+    },
+    {
+      "code": "CN-31",
+      "name": "Shanghai",
+      "localName": "上海市",
+      "aliases": [],
+      "coordinates": [
+        31.072559,
+        121.438737
+      ]
+    },
+    {
+      "code": "CN-32",
+      "name": "Jiangsu",
+      "localName": "江苏省",
+      "aliases": [],
+      "coordinates": [
+        32.983991,
+        119.486506
+      ]
+    },
+    {
+      "code": "CN-33",
+      "name": "Zhejiang",
+      "localName": "浙江省",
+      "aliases": [],
+      "coordinates": [
+        29.181466,
+        120.109913
+      ]
+    },
+    {
+      "code": "CN-34",
+      "name": "Anhui",
+      "localName": "安徽省",
+      "aliases": [],
+      "coordinates": [
+        31.849254,
+        117.226884
+      ]
+    },
+    {
+      "code": "CN-35",
+      "name": "Fujian",
+      "localName": "福建省",
+      "aliases": [],
+      "coordinates": [
+        26.069925,
+        118.006468
+      ]
+    },
+    {
+      "code": "CN-36",
+      "name": "Jiangxi",
+      "localName": "江西省",
+      "aliases": [],
+      "coordinates": [
+        27.636112,
+        115.732975
+      ]
+    },
+    {
+      "code": "CN-37",
+      "name": "Shandong",
+      "localName": "山东省",
+      "aliases": [],
+      "coordinates": [
+        36.376092,
+        118.187759
+      ]
+    },
+    {
+      "code": "CN-41",
+      "name": "Henan",
+      "localName": "河南省",
+      "aliases": [],
+      "coordinates": [
+        33.902648,
+        113.619717
+      ]
+    },
+    {
+      "code": "CN-42",
+      "name": "Hubei",
+      "localName": "湖北省",
+      "aliases": [],
+      "coordinates": [
+        30.987527,
+        112.271301
+      ]
+    },
+    {
+      "code": "CN-43",
+      "name": "Hunan",
+      "localName": "湖南省",
+      "aliases": [],
+      "coordinates": [
+        27.629216,
+        111.711649
+      ]
+    },
+    {
+      "code": "CN-44",
+      "name": "Guangdong",
+      "localName": "广东省",
+      "aliases": [],
+      "coordinates": [
+        23.334643,
+        113.429919
+      ]
+    },
+    {
+      "code": "CN-45",
+      "name": "Guangxi",
+      "localName": "广西壮族自治区",
+      "aliases": [
+        "Guangxi Zhuang Autonomous Region"
+      ],
+      "coordinates": [
+        23.833381,
+        108.7944
+      ]
+    },
+    {
+      "code": "CN-46",
+      "name": "Hainan",
+      "localName": "海南省",
+      "aliases": [],
+      "coordinates": [
+        19.189767,
+        109.754859
+      ]
+    },
+    {
+      "code": "CN-50",
+      "name": "Chongqing",
+      "localName": "重庆市",
+      "aliases": [],
+      "coordinates": [
+        30.067297,
+        107.8839
+      ]
+    },
+    {
+      "code": "CN-51",
+      "name": "Sichuan",
+      "localName": "四川省",
+      "aliases": [],
+      "coordinates": [
+        30.674545,
+        102.693453
+      ]
+    },
+    {
+      "code": "CN-52",
+      "name": "Guizhou",
+      "localName": "贵州省",
+      "aliases": [],
+      "coordinates": [
+        26.826368,
+        106.880455
+      ]
+    },
+    {
+      "code": "CN-53",
+      "name": "Yunnan",
+      "localName": "云南省",
+      "aliases": [],
+      "coordinates": [
+        25.008643,
+        101.485106
+      ]
+    },
+    {
+      "code": "CN-54",
+      "name": "Tibet",
+      "localName": "西藏自治区",
+      "aliases": [
+        "Xizang",
+        "Tibet Autonomous Region"
+      ],
+      "coordinates": [
+        31.56375,
+        88.388277
+      ]
+    },
+    {
+      "code": "CN-61",
+      "name": "Shaanxi",
+      "localName": "陕西省",
+      "aliases": [],
+      "coordinates": [
+        35.263661,
+        108.887114
+      ]
+    },
+    {
+      "code": "CN-62",
+      "name": "Gansu",
+      "localName": "甘肃省",
+      "aliases": [],
+      "coordinates": [
+        36.058039,
+        103.823557
+      ]
+    },
+    {
+      "code": "CN-63",
+      "name": "Qinghai",
+      "localName": "青海省",
+      "aliases": [],
+      "coordinates": [
+        35.726403,
+        96.043533
+      ]
+    },
+    {
+      "code": "CN-64",
+      "name": "Ningxia",
+      "localName": "宁夏回族自治区",
+      "aliases": [
+        "Ningxia Hui Autonomous Region"
+      ],
+      "coordinates": [
+        37.291332,
+        106.169866
+      ]
+    },
+    {
+      "code": "CN-65",
+      "name": "Xinjiang",
+      "localName": "新疆维吾尔自治区",
+      "aliases": [
+        "Xinjiang Uygur Autonomous Region"
+      ],
+      "coordinates": [
+        41.371801,
+        85.294711
+      ]
+    },
+    {
+      "code": "CN-71",
+      "name": "Taiwan",
+      "localName": "台湾省",
+      "aliases": [],
+      "coordinates": [
+        23.749452,
+        120.971485
+      ]
+    },
+    {
+      "code": "CN-81",
+      "name": "Hong Kong",
+      "localName": "香港特别行政区",
+      "aliases": [],
+      "coordinates": [
+        22.377366,
+        114.134357
+      ]
+    },
+    {
+      "code": "CN-82",
+      "name": "Macao",
+      "localName": "澳门特别行政区",
+      "aliases": [
+        "Macau"
+      ],
+      "coordinates": [
+        22.159307,
+        113.566988
+      ]
+    }
+  ]
+}
