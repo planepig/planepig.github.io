@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
+import GoatCounter from "@/components/layout/GoatCounter";
 import { ThemeProvider } from "@/components/ui/ThemeProvider";
 import { getConfig, type SiteConfig } from "@/lib/config";
 
@@ -173,6 +174,7 @@ export default function RootLayout({
       </head>
       <body className={`font-sans antialiased`}>
         <ThemeProvider>
+          <GoatCounter siteUrl={siteUrl} />
           <Navigation
             items={config.navigation}
             siteTitle={config.site.title}
