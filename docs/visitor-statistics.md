@@ -29,3 +29,8 @@ Geographic totals count visits using GoatCounter's session rules; they need not
 match Busuanzi page views. Older Busuanzi views cannot be assigned locations.
 Country centres come from mledoze/countries under ODbL; attribution and aggregate
 data are linked on the visitor page. Globe rendering uses COBE (MIT).
+
+The official tracker is served locally as `/vendor/goatcounter.js` to avoid a
+separate CDN dependency. Source: https://github.com/arp242/goatcounter/blob/main/public/count.js
+(retrieved 2026-10-19, ISC license). Self-hosting is supported by GoatCounter:
+https://www.goatcounter.com/help/countjs-host . Keep the upstream license header.

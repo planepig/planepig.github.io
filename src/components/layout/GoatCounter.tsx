@@ -30,7 +30,7 @@ export default function GoatCounter({ siteUrl }: { siteUrl: string }) {
   if (!enabled) return null;
   return <Script
     id="goatcounter"
-    src="https://gc.zgo.at/count.js"
+    src="/vendor/goatcounter.js"
     data-goatcounter="https://planepig.goatcounter.com/count"
     data-goatcounter-settings='{"no_onload":true}'
     strategy="afterInteractive"
