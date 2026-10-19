@@ -28,7 +28,7 @@ export default function VisitorsPage() {
     </header>
     <VisitorGlobe locations={visitors.locations} />
     <div className="mt-5 space-y-2 text-xs leading-relaxed text-neutral-500">
-      <p>Since Oct 19, 2026 · Updated hourly{updated ? ` · Last update: ${updated} UTC` : ''}</p>
+      <p>Since Oct 19, 2026 · Hourly updates scheduled{updated ? ` · Last update: ${updated} UTC` : ''}</p>
       <p>Locations are approximate and show cumulative visits since geographic tracking began. Earlier views have no location data. The footer’s page-view counter uses a different counting method.</p>
       <p>Only aggregate locations and counts are displayed. Statistics by <a href="https://www.goatcounter.com/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">GoatCounter</a> · <a href="https://www.goatcounter.com/help/privacy" target="_blank" rel="noopener noreferrer" className="hover:underline">Privacy</a></p>
       <p>Country centres: <a href="https://github.com/mledoze/countries" className="hover:underline">mledoze/countries</a> (<a href="https://opendatacommons.org/licenses/odbl/1-0/" className="hover:underline">ODbL</a>) · <a href="/visitor-stats.json" className="hover:underline">Aggregate data</a></p>
