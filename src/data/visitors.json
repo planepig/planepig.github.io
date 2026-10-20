@@ -1,12 +1,12 @@
 {
   "since": "2026-10-19",
-  "updatedAt": "2026-10-19T15:28:53.985Z",
-  "total": 11,
+  "updatedAt": "2026-10-20T04:14:29.241Z",
+  "total": 28,
   "locations": [
     {
       "code": "CN",
       "name": "China",
-      "count": 4,
+      "count": 14,
       "coordinates": [
         35,
         105
@@ -16,11 +16,29 @@
           "code": "CN-44",
           "name": "Guangdong",
           "localName": "广东省",
-          "count": 4,
+          "count": 14,
           "coordinates": [
             23.334643,
             113.429919
           ]
+        }
+      ]
+    },
+    {
+      "code": "SG",
+      "name": "Singapore",
+      "count": 7,
+      "coordinates": [
+        1.36666666,
+        103.8
+      ],
+      "regions": [
+        {
+          "code": "SG-region-0",
+          "name": "Unspecified region",
+          "localName": null,
+          "count": 7,
+          "coordinates": null
         }
       ]
     },
@@ -43,16 +61,16 @@
       ]
     },
     {
-      "code": "SG",
-      "name": "Singapore",
+      "code": "HK",
+      "name": "Hong Kong",
       "count": 2,
       "coordinates": [
-        1.36666666,
-        103.8
+        22.267,
+        114.188
       ],
       "regions": [
         {
-          "code": "SG-region-0",
+          "code": "HK-region-0",
           "name": "Unspecified region",
           "localName": null,
           "count": 2,

@@ -44,3 +44,5 @@ next-env.d.ts
 .wrangler
 # Local-only paper assets excluded from publication.
 /.private-assets/
+# Independent statistics service has its own managed source repository.
+/services/visitor-api/

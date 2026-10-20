@@ -3,8 +3,6 @@ name: Deploy personal website to GitHub Pages
 on:
   push:
     branches: [main]
-  schedule:
-    - cron: "23 * * * *"
   workflow_dispatch:
 
 permissions:
@@ -37,12 +35,7 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Check visitor aggregation
-        run: node --test scripts/sync-visitors.test.mjs
-
-      - name: Refresh cumulative visitor statistics
-        env:
-          GOATCOUNTER_API_TOKEN: ${{ secrets.GOATCOUNTER_API_TOKEN }}
-        run: node scripts/sync-visitors.mjs
+        run: node --test scripts/sync-visitors.test.mjs scripts/visitor-snapshot.test.mjs
 
       - name: Build site
         run: npm run build
