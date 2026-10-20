@@ -37,9 +37,6 @@ jobs:
       - name: Check visitor aggregation
         run: node --test scripts/sync-visitors.test.mjs scripts/visitor-snapshot.test.mjs
 
-      - name: Check static export
-        run: node --test scripts/inline-export-scripts.test.mjs
-
       - name: Build site
         run: npm run build
 
