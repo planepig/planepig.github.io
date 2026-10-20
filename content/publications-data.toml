@@ -68,4 +68,5 @@ year = 2026
 status = "accepted"
 type = "conference"
 preview = "recjudge.webp"
-pdf = "/papers/recjudge.pdf"
+arxiv = "https://arxiv.org/abs/2606.22961"
+github = "https://github.com/QueYork/LLM-as-a-Judge"

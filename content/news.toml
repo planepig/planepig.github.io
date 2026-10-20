@@ -1,7 +1,7 @@
 # Dates below are event/proceedings dates, not inferred acceptance dates.
 [[news]]
 date = "2026-08"
-content = "[LLM-as-a-Judge for Top-K Recommendation](/papers/recjudge.pdf) was accepted to **KDD 2026** for an **oral presentation**."
+content = "[LLM-as-a-Judge for Top-K Recommendation](https://arxiv.org/abs/2606.22961) was accepted to **KDD 2026** for an **oral presentation**."
 
 [[news]]
 date = "2026-07"
