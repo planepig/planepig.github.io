@@ -38,6 +38,12 @@ export async function generateMetadata(): Promise<Metadata> {
     authors: [{ name: config.author.name }],
     creator: config.author.name,
     publisher: config.author.name,
+    verification: {
+      google: "xmcBbxiD7u-kiROople7_ZuWIm6U62mjjpzqJgWzCUU",
+      other: {
+        "msvalidate.01": "921544A72DB028B069FC39DA70A89791",
+      },
+    },
     alternates: {
       canonical: "/",
     },
