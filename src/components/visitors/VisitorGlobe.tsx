@@ -152,14 +152,16 @@ export default function VisitorGlobe({ locations }: { locations: VisitorLocation
         <span className="text-xs text-neutral-500">Visits</span>
       </div>
       {locations.length ? <ol className="max-h-[420px] space-y-1 overflow-y-auto pr-1">
-        {locations.map(location => <li key={location.code}>
+        {locations.map(location => {
+          const regions = location.regions?.filter(region => region.name !== 'Unspecified region') ?? [];
+          return <li key={location.code}>
           <button onClick={() => focusLocation(location)} aria-pressed={selected === location.code}
             className={`relative flex w-full items-center justify-between gap-4 overflow-hidden rounded-lg px-3 py-3 text-left text-sm transition-colors hover:bg-neutral-100 ${selected === location.code ? 'bg-neutral-100 text-accent' : 'text-primary'}`}>
             <span className="absolute bottom-0 left-3 h-px bg-accent/40" style={{ width: `${(location.count / locations[0].count) * 85}%` }} />
             <span>{location.name}</span><span className="tabular-nums text-neutral-500">{location.count.toLocaleString('en-US')}</span>
           </button>
-          {!!location.regions?.length && <ul className="ml-3 border-l border-neutral-200 pl-3 py-1">
-            {location.regions.map(region => <li key={region.code}>
+          {!!regions.length && <ul className="ml-3 border-l border-neutral-200 pl-3 py-1">
+            {regions.map(region => <li key={region.code}>
               {region.coordinates ? <button onClick={() => focusLocation(region)} aria-pressed={selected === region.code}
                 className={`flex w-full items-center justify-between gap-3 rounded-md px-2 py-2 text-left text-xs hover:bg-neutral-100 ${selected === region.code ? 'text-accent bg-neutral-100' : 'text-neutral-600'}`}>
                 <span>{region.name}{region.localName && <span className="ml-1.5 text-neutral-500">{region.localName}</span>}</span>
@@ -169,7 +171,8 @@ export default function VisitorGlobe({ locations }: { locations: VisitorLocation
               </div>}
             </li>)}
           </ul>}
-        </li>)}
+        </li>;
+        })}
       </ol> : <div className="py-12 text-sm leading-7 text-neutral-500">
         A new journey starts here.<br />Visitor locations will appear after the first statistics update.
       </div>}
