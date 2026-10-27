@@ -1,33 +1,12 @@
 {
   "since": "2026-10-19",
-  "updatedAt": "2026-10-20T04:14:29.241Z",
-  "total": 28,
+  "updatedAt": "2026-10-27T04:15:46.838Z",
+  "total": 68,
   "locations": [
-    {
-      "code": "CN",
-      "name": "China",
-      "count": 14,
-      "coordinates": [
-        35,
-        105
-      ],
-      "regions": [
-        {
-          "code": "CN-44",
-          "name": "Guangdong",
-          "localName": "广东省",
-          "count": 14,
-          "coordinates": [
-            23.334643,
-            113.429919
-          ]
-        }
-      ]
-    },
     {
       "code": "SG",
       "name": "Singapore",
-      "count": 7,
+      "count": 24,
       "coordinates": [
         1.36666666,
         103.8
@@ -37,15 +16,36 @@
           "code": "SG-region-0",
           "name": "Unspecified region",
           "localName": null,
-          "count": 7,
+          "count": 24,
           "coordinates": null
+        }
+      ]
+    },
+    {
+      "code": "CN",
+      "name": "China",
+      "count": 22,
+      "coordinates": [
+        35,
+        105
+      ],
+      "regions": [
+        {
+          "code": "CN-44",
+          "name": "Guangdong",
+          "localName": "广东省",
+          "count": 22,
+          "coordinates": [
+            23.334643,
+            113.429919
+          ]
         }
       ]
     },
     {
       "code": "US",
       "name": "United States",
-      "count": 4,
+      "count": 11,
       "coordinates": [
         38,
         -97
@@ -55,7 +55,28 @@
           "code": "US-region-0",
           "name": "California",
           "localName": null,
-          "count": 4,
+          "count": 7,
+          "coordinates": null
+        },
+        {
+          "code": "US-region-1",
+          "name": "Indiana",
+          "localName": null,
+          "count": 2,
+          "coordinates": null
+        },
+        {
+          "code": "US-region-2",
+          "name": "Colorado",
+          "localName": null,
+          "count": 1,
+          "coordinates": null
+        },
+        {
+          "code": "US-region-3",
+          "name": "Georgia",
+          "localName": null,
+          "count": 1,
           "coordinates": null
         }
       ]
@@ -63,7 +84,7 @@
     {
       "code": "HK",
       "name": "Hong Kong",
-      "count": 2,
+      "count": 6,
       "coordinates": [
         22.267,
         114.188
@@ -73,7 +94,7 @@
           "code": "HK-region-0",
           "name": "Unspecified region",
           "localName": null,
-          "count": 2,
+          "count": 6,
           "coordinates": null
         }
       ]
@@ -90,6 +111,78 @@
         {
           "code": "AE-region-0",
           "name": "Dubai",
+          "localName": null,
+          "count": 1,
+          "coordinates": null
+        }
+      ]
+    },
+    {
+      "code": "FR",
+      "name": "France",
+      "count": 1,
+      "coordinates": [
+        46,
+        2
+      ],
+      "regions": [
+        {
+          "code": "FR-region-0",
+          "name": "Unspecified region",
+          "localName": null,
+          "count": 1,
+          "coordinates": null
+        }
+      ]
+    },
+    {
+      "code": "KR",
+      "name": "South Korea",
+      "count": 1,
+      "coordinates": [
+        37,
+        127.5
+      ],
+      "regions": [
+        {
+          "code": "KR-region-0",
+          "name": "Seoul",
+          "localName": null,
+          "count": 1,
+          "coordinates": null
+        }
+      ]
+    },
+    {
+      "code": "SE",
+      "name": "Sweden",
+      "count": 1,
+      "coordinates": [
+        62,
+        15
+      ],
+      "regions": [
+        {
+          "code": "SE-region-0",
+          "name": "Unspecified region",
+          "localName": null,
+          "count": 1,
+          "coordinates": null
+        }
+      ]
+    },
+    {
+      "code": "TW",
+      "name": "Taiwan",
+      "count": 1,
+      "coordinates": [
+        23.5,
+        121
+      ],
+      "regions": [
+        {
+          "code": "TW-region-0",
+          "name": "Taichung City",
           "localName": null,
           "count": 1,
           "coordinates": null

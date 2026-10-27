@@ -1,6 +1,6 @@
 import type { VisitorLocation } from '@/components/visitors/VisitorGlobe';
 
-export const VISITOR_API = 'https://junyi-visitor-statistics.planepig.chatgpt.site/visitor-stats.json';
+export const VISITOR_API = 'https://stats.planepig.top/visitor-stats.json';
 
 export interface VisitorSnapshot {
   since: string;

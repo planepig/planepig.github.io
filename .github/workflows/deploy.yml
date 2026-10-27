@@ -35,7 +35,7 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Check visitor aggregation
-        run: node --test scripts/sync-visitors.test.mjs scripts/visitor-snapshot.test.mjs
+        run: node --test scripts/sync-visitors.test.mjs scripts/visitor-snapshot.test.mjs scripts/visitor-store.test.mjs services/visitor-worker/worker.test.mjs
 
       - name: Build site
         run: npm run build
